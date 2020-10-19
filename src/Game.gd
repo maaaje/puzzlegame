@@ -13,4 +13,4 @@ func _process(_delta):
 				spot_count -= 1
 	if spot_count == 0:
 		game_ended = true
-		print("Level cleared!")
+		

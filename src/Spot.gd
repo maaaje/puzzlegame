@@ -7,11 +7,12 @@ func _ready():
 
 func _on_Spot_body_entered(body):
 	if body.is_in_group("box"):
+		body.glow = true
 		active = true
-		print("Box entered!")
-
+		# play sound
 
 func _on_Spot_body_exited(body):
 	if body.is_in_group("box"):
+		body.glow = false
 		active = false
-		print("Box left!")
+		# play sound
