@@ -6,9 +6,9 @@ var inputs = {"up": Vector2.UP,
 			"left": Vector2.LEFT,
 			"right": Vector2.RIGHT}
 
-onready var ray = $Area2D/RayCast2D
-onready var anim = $Area2D/AnimationPlayer
-onready var tween = $Area2D/Tween
+onready var ray = $KinematicBody2D/RayCast2D
+onready var anim = $KinematicBody2D/AnimationPlayer
+onready var tween = $KinematicBody2D/Tween
 var speed = 10
 
 func _ready():
@@ -27,6 +27,11 @@ func move(dir):
 	if !ray.is_colliding():
 	#	position += inputs[dir] * tile_size
 		move_tween(dir)
+	else:
+		var collider = ray.get_collider()
+		if collider.is_in_group("box"):
+			if collider.move(dir):
+				move_tween(dir)
 		
 func move_tween(dir):
 	anim.play("walk")
