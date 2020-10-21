@@ -4,7 +4,7 @@
 [ext_resource path="res://src/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Spot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Box.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Level_1.gd" type="Script" id=5]
+[ext_resource path="res://src/LevelTemplate.gd" type="Script" id=5]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -15,12 +15,12 @@ glow_intensity = 0.1
 glow_hdr_threshold = 0.8
 glow_bicubic_upscale = true
 
-[node name="Level_1" type="Node2D"]
+[node name="LevelTemplate" type="Node2D"]
 script = ExtResource( 5 )
-level_number = 1
+level_number = 4
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
-tile_data = PoolIntArray( -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -65542, 0, 0, -131071, 0, 0, -6, 0, 0, -65535, 0, 0, 65530, 0, 0, 1, 0, 0, 131066, 0, 0, 65537, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0 )
+tile_data = PoolIntArray( -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -65542, 0, 0, -131067, 0, 0, -6, 0, 0, -4, 0, 0, -65533, 0, 0, -65531, 0, 0, 65530, 0, 0, 65532, 0, 0, 65533, 0, 0, 0, 0, 0, 1, 0, 0, 5, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -32,18 +32,30 @@ __meta__ = {
 [node name="Spots" type="Node2D" parent="."]
 
 [node name="Spot" parent="Spots" instance=ExtResource( 3 )]
-position = Vector2( -64, 16 )
+position = Vector2( 64, -32 )
 
 [node name="Spot2" parent="Spots" instance=ExtResource( 3 )]
-position = Vector2( -16, -32 )
+position = Vector2( 64, 0 )
+
+[node name="Spot3" parent="Spots" instance=ExtResource( 3 )]
+position = Vector2( -48, 16 )
+
+[node name="Spot4" parent="Spots" instance=ExtResource( 3 )]
+position = Vector2( -80, 0 )
 
 [node name="Boxes" type="Node2D" parent="."]
 
 [node name="Box" parent="Boxes" instance=ExtResource( 4 )]
-position = Vector2( -48, -32 )
+position = Vector2( 48, 0 )
 
 [node name="Box2" parent="Boxes" instance=ExtResource( 4 )]
-position = Vector2( -64, 0 )
+position = Vector2( 48, -32 )
+
+[node name="Box3" parent="Boxes" instance=ExtResource( 4 )]
+position = Vector2( -32, 0 )
+
+[node name="Box4" parent="Boxes" instance=ExtResource( 4 )]
+position = Vector2( -80, -16 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -80, -32 )

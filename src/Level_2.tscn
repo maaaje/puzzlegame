@@ -24,7 +24,7 @@ tile_data = PoolIntArray( -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.2, 0.2 )
+zoom = Vector2( 0.4, 0.4 )
 __meta__ = {
 "_editor_description_": ""
 }

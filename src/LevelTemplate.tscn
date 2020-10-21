@@ -6,7 +6,7 @@
 [ext_resource path="res://src/Box.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/LevelTemplate.gd" type="Script" id=5]
 
-[sub_resource type="Environment" id=5]
+[sub_resource type="Environment" id=1]
 background_mode = 4
 fog_color = Color( 0.219608, 0.231373, 0.247059, 1 )
 fog_sun_amount = 0.21
@@ -24,7 +24,7 @@ tile_data = PoolIntArray( -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.2, 0.2 )
+zoom = Vector2( 0.4, 0.4 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -43,7 +43,7 @@ position = Vector2( 48, 0 )
 position = Vector2( -80, -32 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 5 )
+environment = SubResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
