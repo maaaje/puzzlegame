@@ -8,7 +8,7 @@ background_mode = 4
 fog_color = Color( 0.219608, 0.231373, 0.247059, 1 )
 fog_sun_amount = 0.21
 glow_enabled = true
-glow_intensity = 0.1
+glow_intensity = 0.3
 glow_hdr_threshold = 0.8
 glow_bicubic_upscale = true
 
